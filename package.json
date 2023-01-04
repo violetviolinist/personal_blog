@@ -1,0 +1,11 @@
+{
+  "name": "personal_blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jay Parekh",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  }
+}
