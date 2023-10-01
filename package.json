@@ -1,6 +1,6 @@
 {
   "name": "personal_blog",
-  "version": "1.0.0",
+  "version": "0.2",
   "main": "index.js",
   "author": "Jay Parekh",
   "license": "MIT",
@@ -9,7 +9,6 @@
     "@11ty/eleventy": "2"
   },
   "scripts": {
-    "prepublish": "yarn install",
     "publish": "npx @11ty/eleventy"
   }
 }
