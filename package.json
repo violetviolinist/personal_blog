@@ -6,6 +6,10 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2"
+    "@11ty/eleventy": "2"
+  },
+  "scripts": {
+    "prepublish": "yarn install",
+    "publish": "npx @11ty/eleventy"
   }
 }

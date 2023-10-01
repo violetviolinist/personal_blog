@@ -1,0 +1,93 @@
+---
+title: mostly rants
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <style>
+      @font-face {
+        font-family: "Alternate Gothic";
+        src: url("/css/fonts/AlternateGotNo1D.ttf");
+        font-display: swap;
+      }
+      body {
+        margin: 0;
+      }
+      #main {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        padding: 1.25rem;
+        box-sizing: border-box;
+      }
+      #navBox {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        border-right: 1px solid black;
+        margin-right: 2rem;
+        padding-right: 2rem;
+        align-items: center;
+      }
+      .navItem {
+        font-size: 1.7rem;
+      }
+      #contentBox {
+        height: 100%;
+        width: 85%;
+      }
+      .bulletless-list {
+        list-style: none;
+      }
+      li:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      .destyled-link {
+        text-decoration: none;
+        color: inherit;
+      }
+      #postHeading {
+        font-family: "Alternate Gothic";
+        font-size: 48px;
+      }
+      .currentNavItem {
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="navBox">
+        <ul class="bulletless-list">
+          <li>
+            <a class="destyled-link navItem {% if currentNavItem == 'About' %}currentNavItem{% endif %}" href="/about">
+              About
+            </a>
+          </li>
+          <li class="navItem">
+            Writings
+          </li>
+          <!-- <li>
+            <ul class="bulletless-list">
+              {% for post in collections.post -%}
+                <li>
+                  <a class="destyled-link" href="{{ post.url }}">
+                    {{ post.data.title }}
+                  </a>
+                </li>
+              {% endfor -%}
+            </ul>
+          </li> -->
+        </ul>
+      </div>
+      <div id="contentBox">
+        <!-- <h1 id="postHeading">{{ heading }}</h1> -->
+        {{ content }}
+      </div>
+    </div>
+  </body>
+</html>
